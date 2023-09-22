@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="one"> <input type="text" id="sign"> <input type="number" id="two">
+
+    <button onclick="calc()">calulate</button>
+    <p id="output"></p>
+</body>
+<script>
+    function calc(){
+        var input1=document.getElementById("one");
+        var input2=document.getElementById("two");
+        var sign=document.getElementById("sign");
+        var sum=0
+        if(sign.value == "+"){
+             sum=parseInt(input1.value)+parseInt(input2.value);
+        }
+        if(sign.value == "-"){
+             sum=parseInt(input1.value)-parseInt(input2.value);
+        }
+        if(sign.value == "*"){
+             sum=parseInt(input1.value)*parseInt(input2.value);
+        }
+        if(sign.value == "/"){
+             sum=parseInt(input1.value)/parseInt(input2.value);
+        }
+        var out=document.getElementById("output");
+        out.innerHTML=sum;
+    }
+</script>
+</html>
